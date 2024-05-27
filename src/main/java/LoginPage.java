@@ -85,7 +85,7 @@ public class LoginPage extends BasePage {
         textPasswordIncorrect.sendKeys("incorrect");
     }
 
-    @FindBy(css = ".svg-inline--fa fa-sign-in-alt fa-w-16 ")
+    @FindBy(css = ".svg-inline--fa.fa-sign-in-alt fa-w-16")
     private WebElement loggingIn;
 
     public void clickLoggingIn() {
@@ -97,7 +97,7 @@ public class LoginPage extends BasePage {
     public void setUserNameIncorrect(){
         userNameIncorrect.sendKeys("dina");
     }
-    @FindBy(id = "password")
+    @FindBy(id ="password")
     private WebElement passwordCorrect;
     public void setPasswordCorrect(){
         passwordCorrect.sendKeys("choochoo");

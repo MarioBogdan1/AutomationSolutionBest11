@@ -22,11 +22,11 @@ public class CheckoutTest extends Hooks {
         wait = new WebDriverWait(driver, 10);
     }
     @Test
-    public void checkoutTest() throws InterruptedException {
+    public void proceedToCheckOut() throws InterruptedException {
         checkoutPage.clickProductLink();
         checkoutPage.clickCartIcon();
         checkoutPage.clickCart();
-        checkoutPage.clickToCheckout();
+        checkoutPage.proceedToCheckOut();
         Thread.sleep(5000);
     }
     @Test(description = "Changing quantity test. Asserting that the price is updated correctly.")
@@ -79,8 +79,7 @@ public class CheckoutTest extends Hooks {
     }
     @Test(description = "Search test ,searching after mouse ")
     public void searchTest()throws InterruptedException{
-        checkoutPage.enterSearchBar();
-        checkoutPage.clickSearchButton();
+        checkoutPage.clickSearchLight();
         Thread.sleep(4000);
 
     }
