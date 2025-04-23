@@ -15,11 +15,5 @@ public class CheckoutPage extends BasePage {
         wait = new WebDriverWait(driver, 30);
     }
 
-    @FindBy(linkText = "Awesome Granite Chips")
-    private WebElement productLink;
-
-    public void clickProductLink() {
-        productLink.click();
-    }
 
 }
