@@ -21,5 +21,5 @@ public class CheckoutTest extends Hooks {
         checkoutPage = new CheckoutPage(driver);
         wait = new WebDriverWait(driver, 10);
     }
-//
+//bb
 }
