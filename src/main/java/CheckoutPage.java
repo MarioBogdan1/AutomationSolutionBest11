@@ -14,6 +14,62 @@ public class CheckoutPage extends BasePage {
         super(driver);
         wait = new WebDriverWait(driver, 30);
     }
+@FindBy(linkText = "Awesome Granite Chips")
+    private WebElement awesomeChipsProduct;
+
+    public void clickAwesomeChipsProduct(){
+        awesomeChipsProduct.click();
+    }
+    @FindBy(css = ".svg-inline--fa.fa-cart-plus.fa-w-18.fa-3x ")
+    private WebElement cartIcon;
+
+    public void clickCartIcon(){
+        cartIcon.click();
+    }
+    @FindBy(css = ".svg-inline--fa.fa-shopping-cart.fa-w-18 ")
+    private WebElement shoppingCartIcon;
+
+    public void clickShoppingCartIcon(){
+        shoppingCartIcon.click();
+    }
+@FindBy(css = ".btn.btn-success")
+    private WebElement checkoutButton;
+
+    public void clickCheckoutButton(){
+        checkoutButton.click();
+    }
+    @FindBy(id = "first-name")
+    private WebElement firstNameSlot;
+
+    public void setFirstNameSlot(){
+        firstNameSlot.sendKeys("Mario");
+    }
+@FindBy(id = "last-name")
+    private WebElement lastNameSlot;
+
+    public void setLastNameSlot(){
+        lastNameSlot.sendKeys("Iancu");
+    }
+@FindBy(id = "address")
+    private WebElement addressSlot;
+
+    public void setAddressSlot(){
+        addressSlot.sendKeys("Craiova");
+    }
+@FindBy(css = ".btn.btn-success")
+        private WebElement continueCheckoutButton;
+
+public void clickContinueCheckoutButton(){
+    continueCheckoutButton.click();
+}
+@FindBy(css = ".btn.btn-success")
+    private WebElement completeOrderButton;
+
+public void clickCompleteOrderButton(){
+    completeOrderButton.click();
+}
+
+
 
 
 }

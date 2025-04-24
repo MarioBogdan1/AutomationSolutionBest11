@@ -21,5 +21,18 @@ public class CheckoutTest extends Hooks {
         checkoutPage = new CheckoutPage(driver);
         wait = new WebDriverWait(driver, 10);
     }
-//bb
+@Test(description = "Purchasing a product as a guest user")
+    public void checkoutTest() throws InterruptedException {
+checkoutPage.clickAwesomeChipsProduct();
+checkoutPage.clickCartIcon();
+checkoutPage.clickShoppingCartIcon();
+checkoutPage.clickCheckoutButton();
+checkoutPage.setFirstNameSlot();
+checkoutPage.setLastNameSlot();
+checkoutPage.setAddressSlot();
+checkoutPage.clickContinueCheckoutButton();
+checkoutPage.clickCompleteOrderButton();
+Thread.sleep(5000);
+}
+
 }
